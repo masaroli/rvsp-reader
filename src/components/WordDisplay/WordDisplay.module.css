@@ -1,0 +1,52 @@
+/* ─── WordDisplay CSS Module ──────────────────────────────────────────────── */
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 140px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: clamp(28px, 9vw, 48px);
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ORP crosshair ticks */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  left: 37%;
+  width: 2px;
+  height: 20px;
+  background: var(--brand-red);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.container::before {
+  top: 0;
+}
+
+.container::after {
+  bottom: 0;
+}
+
+.word {
+  white-space: nowrap;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: -1px;
+  will-change: transform;
+}
+
+/* ORP focus character — injected via innerHTML in the hook */
+:global(.orp-focus) {
+  color: var(--brand-red);
+}

@@ -1,0 +1,51 @@
+/* ─── ReaderPage CSS Module ───────────────────────────────────────────────── */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Outer column grouping the reader viewport and the controls panel */
+.readerColumn {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* 
+  The ui-wrapper is targeted by ID in the GSAP animations (same as HTML draft).
+  We keep the ID on the DOM element; the class is for CSS Modules structure.
+*/
+.uiWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stopHint {
+    position: fixed;
+    bottom: 30px;
+    font-size: 12px;
+    color: #444;
+    opacity: 0;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    user-select: none;
+}
+
+.progress {
+    font-size: 11px;
+    color: #444;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+}

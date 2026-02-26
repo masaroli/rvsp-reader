@@ -1,0 +1,8 @@
+{
+    "placeholder": "Paste your text here…",
+    "startButton": "Start",
+    "stopHint": "Click anywhere to stop",
+    "rewindButton": "Rewind 5s",
+    "wpmLabel": "WPM",
+    "initialWord": "Begin."
+}

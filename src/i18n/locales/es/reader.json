@@ -1,0 +1,8 @@
+{
+    "placeholder": "Pega tu texto aquí…",
+    "startButton": "Empezar",
+    "stopHint": "Haz click en cualquier lugar para detener",
+    "rewindButton": "Retroceder 5s",
+    "wpmLabel": "PPM",
+    "initialWord": "Comenzar."
+}

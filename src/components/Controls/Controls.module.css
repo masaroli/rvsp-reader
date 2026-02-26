@@ -1,0 +1,114 @@
+/* ─── Controls CSS Module ─────────────────────────────────────────────────── */
+
+.controls {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ── WPM Input Group ── */
+.inputGroup {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    height: 45px;
+    transition: border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.inputGroup:focus-within {
+    border-color: var(--brand-red);
+}
+
+.wpmLabel {
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.wpmInput {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 60px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    margin-left: 8px;
+    outline: none;
+    /* hide spin arrows for a cleaner look */
+    -moz-appearance: textfield;
+}
+
+.wpmInput::-webkit-inner-spin-button,
+.wpmInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/* ── Buttons ── */
+.btnPrimary {
+    grid-area: 1 / 1 / 2 / 3;
+    height: 45px;
+    padding: 0 25px;
+    cursor: pointer;
+    background: var(--brand-red);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    flex-grow: 1;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+}
+
+.btnPrimary:hover {
+    background: #ff5555;
+    box-shadow: 0 4px 20px rgba(255, 62, 62, 0.35);
+}
+
+.btnPrimary:active {
+    transform: scale(0.97);
+}
+
+.btnSecondary {
+    height: 45px;
+    padding: 0 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    flex-grow: 1;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    font-family: inherit;
+}
+
+.btnSecondary:hover {
+    border-color: #555;
+    color: #ccc;
+}
+
+.btnSecondary:active {
+    transform: scale(0.97);
+}
