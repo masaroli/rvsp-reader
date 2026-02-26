@@ -6,7 +6,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import enReader from "./locales/en/reader.json";
 import esReader from "./locales/es/reader.json";
 
-i18n
+void i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({

@@ -87,6 +87,7 @@ export function useReader(): UseReaderReturn {
         idxRef.current += 1;
         setCurrentIdx(idxRef.current);
 
+        // eslint-disable-next-line react-hooks/immutability
         delayedCallRef.current = gsap.delayedCall(delay, showNextWord);
     }, []);
 
@@ -97,7 +98,7 @@ export function useReader(): UseReaderReturn {
         }
         if (focusTLRef.current) {
             gsap.killTweensOf(showNextWord);
-            focusTLRef.current.reverse().then(() => {
+            void focusTLRef.current.reverse().then(() => {
                 gsap.set([containerRef.current, "#ui-wrapper"], { clearProps: "all" });
             });
         }

@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
                 <button
                     key={locale}
                     className={`${styles.btn} ${current === locale ? styles.active : ""}`}
-                    onClick={() => i18n.changeLanguage(locale)}
+                    onClick={() => void i18n.changeLanguage(locale)}
                     aria-pressed={current === locale}
                 >
                     {locale}
